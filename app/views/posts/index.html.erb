@@ -1,0 +1,10 @@
+<h1>These are the posts </h1>
+<% @posts.each do |post| %>
+  <h2> <%= post.title %> </h2>
+  <p>
+    <%= post.body %>
+  </p>
+  <%= link_to "Read more", post_path(post), :class => "some-random" %>
+  <%= link_to "Edit", edit_post_path(post), :class => "some-random" %>
+  <%= link_to "Delete", post_path(post), method: :delete, data: { confirm: 'are you sure?' }, :class => "some-random" %>
+<% end %>

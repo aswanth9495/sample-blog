@@ -1,0 +1,16 @@
+<h1> New Post </h1>
+<!-- Posts path here is important -->
+<%= form_for :post, url: posts_path do |f| %>
+<%= f %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body , {:class => "form-control"}%><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %><br>
+  </p>
+<%end %>
